@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
 import "./index.css";
-import TodoList from "./components/TodoList";
-import UserList from "./components/UserList";
 
 function Home() {
   const navigate = useNavigate();
@@ -84,14 +82,6 @@ function App() {
   };
 
   return (
-    <Router>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/todolist" element={<TodoList />} />
-        <Route path="/userlist" element={<UserList />} />
-      </Routes>
-
       <div className="container">
         <div className="card counter">
           <h2>Counter</h2>
@@ -138,7 +128,6 @@ function App() {
           <p className="result">The Result Is: <span>{result}</span></p>
         </div>
       </div>
-    </Router>
   );
 }
 
